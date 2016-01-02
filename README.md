@@ -1,18 +1,24 @@
 # SimpleKafkaAPI
 Java-API which helps programmers to create Kafka Consumer and Kafka producer and Integrate with their apps easily
 
- Developers can Integrate KafkaConsumer with their app using minimal code.
- To use this API Developers has to download SimpleKafkaAPI-1.0-SNAPSHOT.jar from target folder,and put this jar in their class path along with other kafka dependent dependencies  mentioned in  pom file and start Integrating with the application.To integrate the app follow the instruction given here 
-
- KafkaConsumerProperties consumerProperties = new KafkaConsumerProperties("localhost",2181);
- KafkaConsumer consumer = new KafkaConsumer(consumerProperties);
- consumer.startTopicConsumerThread("TopicName");
  
- Developers has to implement Interface ConsumerListener and override   
- public String receiveMessage(String message)  method  to listen to kafka read event and add this class to consumers Listener List
- KafkaEventListener eventListener = new KafkaEventListener();
-  consumer.addListener(eventListener);
-  
+ To use this API Developers has to download SimpleKafkaAPI-1.0-SNAPSHOT.jar from target folder,and put this jar in their class path along with other kafka dependent dependencies  mentioned in  pom file and start Integrating with the application.To integrate the app follow the instruction given here .<br/>
+Developers can Integrate KafkaConsumer with their app using minimal code.
+
+import org.middlewave.simplekafkaintegrator.kafkaconsumer.KafkaConsumer;<br/>
+import org.middlewave.simplekafkaintegrator.properties.KafkaConsumerProperties;<br/>
+
+ KafkaConsumerProperties consumerProperties = new KafkaConsumerProperties("localhost",2181);<br/>
+ KafkaConsumer consumer = new KafkaConsumer(consumerProperties);<br/>
+ consumer.startTopicConsumerThread("TopicName");<br/>
+ 
+ Developers has to implement Interface ConsumerListener  and override   
+ public String receiveMessage(String message)  method  to listen to kafka read event and add the overrided class to consumers Listener List,so that the  event will be triggered receiveMessage().and developers can handle the event easily.
+ 
+ KafkaEventListener eventListener = new KafkaEventListener();<br/>
+ consumer.addListener(eventListener);<br/><br/>
+ 
+  import org.middlewave.simplekafkaintegrator.listener.ConsumerListener;<br/>
   class KafkaEventListener implements ConsumerListener {
 
         @Override
@@ -27,11 +33,11 @@ Java-API which helps programmers to create Kafka Consumer and Kafka producer and
  
  To initiate Producer class use following code
  
-import org.middlewave.simplekafkaintegrator.kafkaproducer.KafkaProducerClient;
-import org.middlewave.simplekafkaintegrator.properties.KafkaProducerProperties;
+import org.middlewave.simplekafkaintegrator.kafkaproducer.KafkaProducerClient;<br/>
+import org.middlewave.simplekafkaintegrator.properties.KafkaProducerProperties;<br/>
 
-KafkaProducerProperties producerProperties=new KafkaProducerProperties("localhost",9092);
-KafkaProducerClient client=new KafkaProducerClient(producerProperties);
+KafkaProducerProperties producerProperties=new KafkaProducerProperties("localhost",9092);<br/>
+KafkaProducerClient client=new KafkaProducerClient(producerProperties);<br/>
 
 Using KafkaProducerClient's sendMessage(Topic, message); function developers can send messages to a particular topic
 
