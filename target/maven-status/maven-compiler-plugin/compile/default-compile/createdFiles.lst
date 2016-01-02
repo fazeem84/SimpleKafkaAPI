@@ -1,0 +1,12 @@
+org\middlewave\simplekafkaintegrator\properties\KafkaConsumerProperties.class
+org\middlewave\simplekafkaintegrator\kafkaconsumer\MessageRecieverThread.class
+org\middlewave\simplekafkaintegrator\properties\KafkaProducerProperties.class
+org\middlewave\simplekafkaintegrator\kafkatopic\KafkaTopicCreator.class
+org\middlewave\simplekafkaintegrator\test\ConsumerTest.class
+org\middlewave\simplekafkaintegrator\kafkaconsumer\KafkaConsumer.class
+org\middlewave\simplekafkaintegrator\kafkaproducer\SimplePartitioner.class
+org\middlewave\simplekafkaintegrator\test\KafkaEventListener.class
+org\middlewave\simplekafkaintegrator\listener\ConsumerListener.class
+org\middlewave\simplekafkaintegrator\test\ProducerTest.class
+org\middlewave\simplekafkaintegrator\test\KafkaTopicCreatorTest.class
+org\middlewave\simplekafkaintegrator\kafkaproducer\KafkaProducerClient.class
