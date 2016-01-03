@@ -41,7 +41,7 @@ KafkaProducerClient client=new KafkaProducerClient(producerProperties);<br/>
 
 Using KafkaProducerClient's sendMessage(Topic, message); function developers can send messages to a particular topic
 
-Developers can use org.middlewave.simplekafkaintegrator.kafkatopic.KafkaTopicCreator.createTopic("TopicName"); to create a topic
+Developers can use org.middlewave.simplekafkaintegrator.kafkatopic.KafkaTopicCreator.createTopic("localhost",2181,"TopicName"); to create a topic
   
   
  
