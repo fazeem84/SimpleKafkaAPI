@@ -2,7 +2,7 @@
 Java-API which helps programmers to create Kafka Consumer and Kafka producer and Integrate with their apps easily
 
  
- To use this API Developers has to download SimpleKafkaAPI-1.0-SNAPSHOT.jar from target folder,and put this jar in their class path along with other kafka dependent dependencies  mentioned in  pom file and start Integrating with the application.To integrate the app follow the instruction given here .<br/>
+ To use this API Developers has to download SimpleKafkaAPI-1.0-SNAPSHOT.jar from target folder,and put this jar in application class path along with other kafka  dependencies  mentioned in  pom file and developers can start Integrating with the application.To integrate the app follow the instruction given here .<br/>
 Developers can Integrate KafkaConsumer with their app using minimal code.
 
 import org.middlewave.simplekafkaintegrator.kafkaconsumer.KafkaConsumer;<br/>
