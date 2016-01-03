@@ -5,7 +5,6 @@
 package org.middlewave.simplekafkaintegrator.test;
 
 import org.middlewave.simplekafkaintegrator.kafkaproducer.KafkaProducerClient;
-import org.middlewave.simplekafkaintegrator.kafkatopic.KafkaTopicCreator;
 import org.middlewave.simplekafkaintegrator.properties.KafkaProducerProperties;
 
 /**
@@ -17,8 +16,8 @@ public class ProducerTest {
         KafkaProducerProperties producerProperties=new KafkaProducerProperties("localhost",9092);
         KafkaProducerClient client=new KafkaProducerClient(producerProperties);
       
-        client.sendMessage("FazeemTest", "FazeemTest msag1....");
-        //new KafkaTopicCreator().createTopic("FazeemTest");
+        client.sendMessage("Test", "Test msag1....");
+        
     }
     
 }

@@ -12,7 +12,7 @@ import org.middlewave.simplekafkaintegrator.kafkatopic.KafkaTopicCreator;
  */
 public class KafkaTopicCreatorTest {
     public static void main(String[] args) {
-        new KafkaTopicCreator().createTopic("test");
+        new KafkaTopicCreator().createTopic("localhost",2181,"test");
     }
     
 }

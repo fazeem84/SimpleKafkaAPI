@@ -20,7 +20,7 @@ public class ConsumerTest {
     public static void main(String[] args) {
         KafkaConsumerProperties consumerProperties = new KafkaConsumerProperties("localhost",2181);
         KafkaConsumer consumer = new KafkaConsumer(consumerProperties);
-        consumer.startTopicConsumerThread("FazeemTest");
+        consumer.startTopicConsumerThread("Test");
         KafkaEventListener eventListener1 = new KafkaEventListener();
         consumer.addListener(eventListener1);
 

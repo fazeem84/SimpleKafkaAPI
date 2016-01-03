@@ -14,8 +14,8 @@ import kafka.utils.ZKStringSerializer$;
  * @author fazeem
  */
 public class KafkaTopicCreator {
-    public void createTopic(String topic){
-        ZkClient zkClient = new ZkClient("localhost:2181", 10000, 10000, ZKStringSerializer$.MODULE$);
+    public void createTopic(String host,int port,String topic){
+        ZkClient zkClient = new ZkClient(host+":"+port, 10000, 10000, ZKStringSerializer$.MODULE$);
         AdminUtils.createTopic(zkClient, topic, 10, 1, new Properties());
     }
 }
